@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/hello" />
+ 
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+	    <ImageView
+	        android:id="@+id/icon"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:layout_marginRight="2dip"
+	        android:src="@drawable/ic_launcher"/>"
+	    <TextView
+	        android:id="@+id/mystatus"
+	        android:layout_width="fill_parent"
+	        android:layout_height="55dp"
+	        android:text="My name: Unknown. \nMy Address: Unknown. \nMy status: Unknown." />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <Button 
+        android:id="@+id/Search" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:text="@string/search"
+        android:onClick="searchButton"
+        />
+
+	<fragment
+	    android:id="@+id/devicelist"
+	    android:name="com.example.pfc_wifip2p.DeviceListFragment"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" 
+	    android:layout_weight="2"
+	    />
+
+	<fragment 
+	    android:id="@+id/devicedetail" 
+	    android:name="com.example.pfc_wifip2p.DeviceDetailFragment" 
+	    android:layout_width="match_parent" 
+	    android:layout_height="match_parent" 
+	    android:layout_weight="1"/>
+	</LinearLayout>
+</LinearLayout>
